@@ -1,3 +1,28 @@
 #mapId {
   height: 100vh; /* Hace que el mapa ocupe todo el alto de la pantalla */
 }
+
+ion-toolbar {
+  --background: #ffffff; /* Fondo blanco */
+  height: 40px; /* Ajusta la altura del toolbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold; /* Texto en negrita */
+  text-align: center; /* Asegura que el texto esté centrado */
+}
+
+
+
+
+ion-content{
+  background-color: rgb(255, 255, 255);
+}
+
+ion-toolbar{
+  background-color: rgb(17, 0, 112);
+}
+
+ion-button{
+  background-color: rgb(17, 0, 112);
+}

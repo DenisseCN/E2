@@ -1,33 +1,29 @@
 <app-header>
-  <ion-item>
-    <img src="../../../assets/images/Duoc.png" alt="Logo Duoc UC">
-  </ion-item>
-  
-  
+
 </app-header>
+<ion-toolbar color="light "> Hola, vas atrasado? Cálcula tu ruta a DUOC </ion-toolbar>
 
-<ion-content [fullscreen]="true">
-
+<ion-content [fullscreen]="true" >
+  
   <!-- El div con id "mapId" será donde se mostrará el mapa -->
   <div id="mapId" style="height: 100%;"></div>
 
 </ion-content>
 
-<app-footer></app-footer>
 
 <ion-footer>
-  <ion-toolbar class="ion-text-center" color="primary">
-    <ion-button shape="round" color="secondary" size="small"
+  <ion-toolbar class="ion-text-center" color="background-color: rgb(17, 0, 112);">
+    <ion-button shape="round" color="warning" size="small"
         (click)="goToDUOC()" >
       DUOC
     </ion-button>
 
-    <ion-button shape="round" color="secondary" size="small"
+    <ion-button shape="round" color="warning" size="small"
         (click)="goToMyPosition()">
       Aquí
     </ion-button>
 
-    <ion-button shape="round" color="secondary" size="small"
+    <ion-button shape="round" color="warning" size="small"
         (click)="showRouteToDuoc()">
       Ruta
     </ion-button>
