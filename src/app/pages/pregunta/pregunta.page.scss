@@ -1,0 +1,88 @@
+.card-background {
+  position: relative;
+  background-image: url('../../../assets/images/Denisse.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+ion-item {
+  --padding-bottom: 15px;
+  --background: rgba(255, 255, 255, 0.377);
+  border-radius: 9px;
+  color: #000000;
+  height: 55px;
+  display: flex;
+  align-items: center;
+}
+
+ion-input {
+  color: #000000;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+}
+
+ion-card-header, ion-card-subtitle {
+  text-align: center;
+}
+
+ion-toolbar {
+  font-size: 15px;
+  --background: #031a30;
+  border-radius: 10px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo {
+  font-size: 14px;
+  --background: #031a30;
+  height: 18px;
+  padding: 1px 1px; /* Reduce el espacio alrededor para hacerlo más angosto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1; /* Asegura esquinas cuadradas */
+}
+
+ion-card-subtitle {
+  font-size: 16px;          /* Tamaño de fuente */
+  font-weight: bold;        /* Negrita para hacer el texto más destacado */
+  color: #000000;           /* Color de texto */
+  margin: 8px 0;            /* Espaciado vertical entre subtítulos */
+  text-align: center;       /* Centra el texto */
+}
+
+
+
+ion-card {
+  --background: rgba(230, 223, 223, 0.205); /* Fondo semi-transparente */
+  border-radius: 20px;
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+  font-size: 15px;
+}
+
+ion-button {
+  color: #ffffff;
+  --background: #031a30;
+  font-size: 12px;       /* Reduce el tamaño de la fuente */
+  padding: 4px 12px;     /* Ajusta el padding para un tamaño más pequeño */
+  border-radius: 10px;   /* Esquinas menos redondeadas para un estilo más compacto */
+  height: 30px;          /* Establece una altura específica para hacer el botón más pequeño */
+  min-width: 70px;       /* Define un ancho mínimo */
+}
+
+
+ion-label a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+ion-label a:hover {
+  text-decoration: underline;
+}

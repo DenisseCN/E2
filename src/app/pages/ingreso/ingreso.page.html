@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar class="transparent-bg">
+    <!-- Selección de idioma en el lado izquierdo -->
+    <div slot="start" class="ion-margin">
+      <app-language #selectLanguage></app-language>
+    </div>
+
+    <!-- Botón de tema en el lado derecho -->
+    <div slot="end" class="ion-margin">
+      <ion-button class="white-theme-button" shape="round" size="small" (click)="navigateTheme()">
+        Tema
+        <ion-icon slot="start" name="color-wand-outline"></ion-icon>
+      </ion-button>
+    </div>
+       
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="card-background" class="ion-padding-horizontal page">
+     <!-- Imagen de fondo -->
+     <img class="background-image" src="/assets/images/pao.jpg">
+  <ion-card-header>
+    <img src="../../../assets/images/Duoc.png" alt="Logo Duoc UC">
+    <br>
+    <ion-toolbar>
+      Sistema de Asistencia Duoc UC
+    </ion-toolbar>
+  </ion-card-header>
+
+
+    <ion-card>
+      <ion-item>
+        <ion-input 
+          label="{{ 'ingreso.Label.Email' | translate }}" 
+          labelPlacement="floating"
+          [(ngModel)]="cuenta" 
+          placeholder="{{ 'ingreso.Placeholder.Account' | translate }}">
+        </ion-input>
+      </ion-item>
+      <br>
+
+      <!-- Campo de ingreso de contraseña -->
+      <ion-item>
+        <ion-input 
+          label="{{ 'ingreso.Label.Password' | translate }}"
+          labelPlacement="floating"
+          [(ngModel)]="password" 
+          placeholder="{{ 'ingreso.Placeholder.Password' | translate }}"
+          type="password">
+        </ion-input>
+      </ion-item>
+
+      <!-- Botón de ingreso -->
+      <div class="ion-text-center margin-top-6" style="clear: both;">
+        <ion-button class="enter-button normal-text" shape="round" (click)="ingreso()">
+          {{ 'ingreso.Button.ingreso' | translate }}
+        </ion-button>
+      </div>
+
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+
+</ion-footer>

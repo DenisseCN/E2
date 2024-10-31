@@ -1,0 +1,36 @@
+<ion-content [fullscreen]="true" class="ion-padding-horizontal page">
+  <div class="center-container" *ngIf="usuario">
+    <div class="ion-padding-vertical">
+      <ion-card class="ion-text-center card-background">
+        <ion-card-content>
+          <ion-card-header>
+            <img src="../../../assets/images/Duoc.png" alt="Logo Duoc UC">
+            <br>
+            <ion-toolbar>
+              Sistema de Asistencia Duoc UC
+            </ion-toolbar>
+          </ion-card-header>
+
+        
+          <!-- Contenedor de pregunta y entrada de respuesta -->
+          <ion-card>
+            <ion-toolbar class=titulo>
+              Pregunta Secreta
+            </ion-toolbar>
+            <ion-card-subtitle>{{ usuario.nombre }} {{ usuario.apellido }}</ion-card-subtitle>
+            <ion-card-subtitle>{{ usuario.preguntaSecreta }}</ion-card-subtitle>
+            <ion-item>
+              <ion-input [(ngModel)]="respuesta" placeholder="Ej: Delfín" labelPlacement="floating" label="Respuesta"></ion-input>
+            </ion-item>
+            <br>
+            <!-- Botón de recuperación de contraseña -->
+            <ion-button expand="block" size="large" (click)="validarRespuestaSecreta()">
+              <ion-icon name="key"></ion-icon>
+              Recuperar contraseña
+            </ion-button>
+          </ion-card>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

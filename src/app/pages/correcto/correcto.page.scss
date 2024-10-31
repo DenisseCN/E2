@@ -1,0 +1,116 @@
+/* Imagen de fondo que ocupa toda la pantalla */
+.card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../../../assets/images/m.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Envía la imagen al fondo */
+}
+
+/* Contenedor centrado */
+/* Contenedor centrado */
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+/* Estilos para centrar el ion-input y su contenido */
+h1 {
+  font-weight: bold;
+  font-size: 1px;
+  color: #000000;
+}
+
+
+/* Estilo del ion-input para que el texto sea legible */
+ion-input {
+  color: #000000;
+  font-weight: bold;
+  font-size: 15px;
+  --background: transparent; /* Fondo transparente para que no se vea como un campo de entrada */
+}
+
+
+/* Card semi-transparente con bordes redondeados */
+ion-card {
+  --background: rgba(230, 223, 223, 0.7); /* Fondo semi-transparente */
+  border-radius: 20px;
+  padding: 20px;/* Máximo ancho para evitar que sea demasiado grande en pantallas grandes */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar el card */
+  margin-bottom: 20px; /* Añade espacio debajo del card para el botón */
+}
+
+/* Estilo de ion-item */
+ion-item {
+  --padding-bottom: 15px;
+  --background: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
+  border-radius: 10px;
+  color: #000000;
+  height: 55px;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo de ion-input */
+ion-input {
+  color: #000000;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 25px; /* Tamaño ajustado para una mejor visualización */
+}
+
+/* Encabezado y subtítulo centrados */
+ion-card-header, ion-card-subtitle {
+  text-align: center;
+}
+
+/* Barra de herramientas personalizada */
+ion-toolbar {
+  font-size: 15px;
+  --background: #031a30;
+  border-radius: 10px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Botón con bordes menos redondeados y tamaño compacto */
+ion-button {
+  color: #ffffff;
+  --background: #031a30;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  height: 40px;
+  min-width: 100px;
+  margin-top: 20px; /* Añade espacio en la parte superior del botón */
+  align-self: center; /* Alinea el botón en el centro debajo del card */
+}
+
+/* Enlace de ion-label */
+ion-label a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+ion-label a:hover {
+  text-decoration: underline;
+}
+
+/* Imagen de éxito */
+.success-image {
+  width: 80px;
+  height: auto;
+  margin-top: 20px;
+}
