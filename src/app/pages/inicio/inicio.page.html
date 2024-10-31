@@ -1,10 +1,10 @@
 <app-header></app-header>
 
 <ion-content [fullscreen]="true">
-<app-codigoqr></app-codigoqr>
-<app-miclase></app-miclase>
-<app-foro></app-foro>
-<app-misdatos></app-misdatos>
+<app-codigoqr *ngIf="componenteSeleccionada === 'codigoqr'"></app-codigoqr>
+<app-miclase  *ngIf="componenteSeleccionada === 'miclase'"></app-miclase>
+<app-foro     *ngIf="componenteSeleccionada === 'foro'"></app-foro>
+<app-misdatos *ngIf="componenteSeleccionada === 'misdatos'"></app-misdatos>
 </ion-content>
 
 <app-footer></app-footer>

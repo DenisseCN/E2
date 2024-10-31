@@ -22,6 +22,8 @@ export class AuthService {
   // cierra al aplicación y la vuelve a abrir sin haber previamente cerrado la sesión.
   primerInicioSesion =  new BehaviorSubject<boolean>(false);
 
+  componenteSeleccionada = new BehaviorSubject<string>('codigoqr');  //se modificó esto el 31-10-2024
+
   constructor(private router: Router, private bd: DataBaseService, private storage: Storage) { }
 
   async inicializarAutenticacion() {

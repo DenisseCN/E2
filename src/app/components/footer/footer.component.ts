@@ -5,6 +5,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { IonicModule } from '@ionic/angular';
 import { addIcons } from 'ionicons';
 import { gridOutline, homeOutline, pencilOutline, schoolOutline } from 'ionicons/icons';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-footer',
@@ -22,12 +23,13 @@ export class FooterComponent {
 
   componenteSeleccionada: string = 'codigoqr';
 
-  constructor( ) {
+  constructor( private authService: AuthService ) {
     addIcons({ homeOutline, schoolOutline, pencilOutline, gridOutline})
   }
 
 
   cambiarComponente($event: any) {
     this.componenteSeleccionada = $event.detail.value;
+    this.authService.componenteSeleccionada.next(this.componenteSeleccionada);
   }
 }
