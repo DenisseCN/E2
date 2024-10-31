@@ -24,6 +24,10 @@ export class AuthService {
 
   componenteSeleccionada = new BehaviorSubject<string>('codigoqr');  //se modificó esto el 31-10-2024
 
+  
+
+
+
   constructor(private router: Router, private bd: DataBaseService, private storage: Storage) { }
 
   async inicializarAutenticacion() {
