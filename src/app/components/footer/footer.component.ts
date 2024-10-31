@@ -3,6 +3,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { IonicModule } from '@ionic/angular';
+import { addIcons } from 'ionicons';
+import { gridOutline, homeOutline, pencilOutline, schoolOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-footer',
@@ -18,6 +20,14 @@ import { IonicModule } from '@ionic/angular';
 })
 export class FooterComponent {
 
-  constructor() { }
+  componenteSeleccionada: string = 'codigoqr';
 
+  constructor( ) {
+    addIcons({ homeOutline, schoolOutline, pencilOutline, gridOutline})
+  }
+
+
+  cambiarComponente($event: any) {
+    this.componenteSeleccionada = $event.detail.value;
+  }
 }
