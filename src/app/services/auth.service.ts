@@ -22,6 +22,8 @@ export class AuthService {
   // cierra al aplicación y la vuelve a abrir sin haber previamente cerrado la sesión.
   primerInicioSesion =  new BehaviorSubject<boolean>(false);
 
+  componenteSeleccionada = new BehaviorSubject<string>('codigoqr');  //se modificó esto el 31-10-2024
+
   constructor(private router: Router, private bd: DataBaseService, private storage: Storage) { }
 
   async inicializarAutenticacion() {
@@ -55,14 +57,14 @@ export class AuthService {
       if (usuarioAutenticado) {
         this.usuarioAutenticado.next(usuarioAutenticado);
         this.primerInicioSesion.next(false); // Avisar que no es el primer inicio de sesión
-        this.router.navigate(['/home']);
+        this.router.navigate(['/inicio']);
       } else {
         await this.bd.buscarUsuarioValido(cuenta, password).then(async (usuario: Usuario | undefined) => {
           if (usuario) {
             showToast(`¡Bienvenido(a) ${usuario.nombre} ${usuario.apellido}!`);
             this.guardarUsuarioAutenticado(usuario);
             this.primerInicioSesion.next(true); // Avisar que es el primer inicio de sesión
-            this.router.navigate(['/home']);
+            this.router.navigate(['/inicio']);
           } else {
             showToast(`El correo o la password son incorrectos`);
             this.router.navigate(['/ingreso']);

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+# **<span style="color: darkblue; font: verdana;"></span>**
+=======
 # **<span style="color: darkblue; font: verdana;">Angry-Dinosaurs</span>**
+>>>>>>> origin/main
 
 ### Desarrollado por el profesor Cristián Gómez Vega
 ### Correo Triskeledu: cgomezvega@triskeledu.cl

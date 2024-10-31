@@ -1,13 +1,10 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>inicio</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">inicio</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<app-codigoqr *ngIf="componenteSeleccionada === 'codigoqr'"></app-codigoqr>
+<app-miclase  *ngIf="componenteSeleccionada === 'miclase'"></app-miclase>
+<app-foro     *ngIf="componenteSeleccionada === 'foro'"></app-foro>
+<app-misdatos *ngIf="componenteSeleccionada === 'misdatos'"></app-misdatos>
 </ion-content>
+
+<app-footer></app-footer>
